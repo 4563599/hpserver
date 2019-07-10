@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hp.mapper.DataMapper">
+    <select id="getT1List" resultMap="BaseResultMap">
+        SELECT *
+        from t1
+        order by id desc limit #{limitNum}
+    </select>
+
+
+    <select id="getH1List" resultMap="BaseResultMap">
+        SELECT *
+        from humidity
+        order by id desc limit #{limitNum}
+    </select>
+
+
+    <select id="getPressure1Datas" resultMap="BaseResultMap">
+        SELECT *
+        from pressure
+        order by id desc limit #{limitNum}
+    </select>
+
+
+    <select id="getRainfall" resultMap="BaseResultMap">
+        SELECT *
+        from rainfall
+        order by id desc limit #{limitNum}
+    </select>
+
+    <select id="getA1" resultMap="BaseResultMap">
+        SELECT *
+        from a1
+        order by id desc limit #{limitNum}
+    </select>
+
+
+    <resultMap id="BaseResultMap" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="num" property="num"></result>
+        <result column="time" property="time"></result>
+    </resultMap>
+
+    <select id="getBaseT1Nums" resultType="cn.hp.bean.BaseNumData">
+        select max(b.num),min(b.num),avg(b.num)
+        from (select num from t1 order by id desc limit #{limitNum}) b
+    </select>
+
+    <select id="getBaseH1Nums" resultType="cn.hp.bean.BaseNumData">
+        select max(b.num),min(b.num),avg(b.num)
+        from (select num from humidity order by id desc limit #{limitNum}) b
+    </select>
+
+    <select id="getBasePressure1Nums" resultType="cn.hp.bean.BaseNumData">
+        select max(b.num),min(b.num),avg(b.num)
+        from (select num from pressure order by id desc limit #{limitNum}) b
+    </select>
+
+
+    <select id="getBaseRainfallNums" resultType="cn.hp.bean.BaseNumData">
+        select max(b.num),min(b.num),avg(b.num)
+        from (select num from rainfall order by id desc limit #{limitNum}) b
+    </select>
+
+    <select id="getNewPicture" resultType="cn.hp.bean.PictureData">
+        select *
+        from pictures
+        order by id desc limit 1;
+    </select>
+
+</mapper>

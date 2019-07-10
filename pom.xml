@@ -12,6 +12,7 @@
     <artifactId>hp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>hp</name>
+    <packaging>war</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -190,10 +191,14 @@
     </dependencies>
 
     <build>
+        <finalName>hpserver</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork><!--必须添加这个配置-->
+                </configuration>
             </plugin>
         </plugins>
     </build>
