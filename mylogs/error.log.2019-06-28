@@ -1,0 +1,5 @@
+2019-06-28 15:02:37  [ http-nio-8083-exec-8:79099 ] - [ ERROR ]  异常:------->java.lang.NullPointerException
+2019-06-28 15:03:36  [ http-nio-8083-exec-1:44493 ] - [ ERROR ]  异常:------->java.lang.NullPointerException
+2019-06-28 15:10:11  [ http-nio-8083-exec-2:439963 ] - [ ERROR ]  异常:------->java.lang.NullPointerException
+2019-06-28 15:10:39  [ http-nio-8083-exec-2:13710 ] - [ ERROR ]  异常:------->java.lang.NumberFormatException: For input string: "-0.000172"
+2019-06-28 15:13:00  [ http-nio-8083-exec-1:56259 ] - [ ERROR ]  异常:------->org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: [D cannot be cast to java.lang.String; nested exception is com.fasterxml.jackson.databind.JsonMappingException: [D cannot be cast to java.lang.String (through reference chain: cn.hp.bean.BaseResultA1Data["baseDataList"]->java.util.ArrayList[0]->cn.hp.bean.BaseA1Data["nums"]->java.util.Arrays$ArrayList[0])

@@ -1,71 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.hp.mapper.DataMapper">
-    <select id="getT1List" resultMap="BaseResultMap">
-        SELECT *
-        from t1
+    <select id="getPressure1_mean" resultMap="BaseResultMapP1">
+        SELECT id,Pressure1_mean,FormatTime
+        from datas
         order by id desc limit #{limitNum}
     </select>
 
-
-    <select id="getH1List" resultMap="BaseResultMap">
-        SELECT *
-        from humidity
-        order by id desc limit #{limitNum}
-    </select>
-
-
-    <select id="getPressure1Datas" resultMap="BaseResultMap">
-        SELECT *
-        from pressure
-        order by id desc limit #{limitNum}
-    </select>
-
-
-    <select id="getRainfall" resultMap="BaseResultMap">
-        SELECT *
-        from rainfall
-        order by id desc limit #{limitNum}
-    </select>
-
-    <select id="getA1" resultMap="BaseResultMap">
-        SELECT *
-        from a1
-        order by id desc limit #{limitNum}
-    </select>
-
-
-    <resultMap id="BaseResultMap" type="cn.hp.bean.BaseData">
+    <resultMap id="BaseResultMapP1" type="cn.hp.bean.BaseData">
         <id column="id" property="id"></id>
-        <result column="num" property="num"></result>
-        <result column="time" property="time"></result>
+        <result column="Pressure1_mean" property="num"></result>
+        <result column="FormatTime" property="time"></result>
     </resultMap>
 
-    <select id="getBaseT1Nums" resultType="cn.hp.bean.BaseNumData">
-        select max(b.num),min(b.num),avg(b.num)
-        from (select num from t1 order by id desc limit #{limitNum}) b
+    <select id="getA1_variance" resultMap="BaseResultMapA1">
+        SELECT id,A1_variance,FormatTime
+        from datas
+        order by id desc limit #{limitNum}
     </select>
 
-    <select id="getBaseH1Nums" resultType="cn.hp.bean.BaseNumData">
-        select max(b.num),min(b.num),avg(b.num)
-        from (select num from humidity order by id desc limit #{limitNum}) b
+    <resultMap id="BaseResultMapA1" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="A1_variance" property="num"></result>
+        <result column="FormatTime" property="time"></result>
+    </resultMap>
+
+    <select id="getT1" resultMap="BaseResultMapT1">
+        SELECT id,T1,FormatTime
+        from datas
+        order by id desc limit #{limitNum}
     </select>
 
-    <select id="getBasePressure1Nums" resultType="cn.hp.bean.BaseNumData">
-        select max(b.num),min(b.num),avg(b.num)
-        from (select num from pressure order by id desc limit #{limitNum}) b
+    <resultMap id="BaseResultMapT1" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="T1" property="num"></result>
+        <result column="FormatTime" property="time"></result>
+    </resultMap>
+
+    <select id="getHumidity1_mean" resultMap="BaseResultMapH1">
+        SELECT id,Humidity1_mean,FormatTime
+        from datas
+        order by id desc limit #{limitNum}
+    </select>
+
+    <resultMap id="BaseResultMapH1" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="Humidity1_mean" property="num"></result>
+        <result column="FormatTime" property="time"></result>
+    </resultMap>
+
+    <select id="getrainfall_mean" resultMap="BaseResultMapR1">
+        SELECT id,rainfall_mean,FormatTime
+        from datas
+        order by id desc limit #{limitNum}
+    </select>
+
+    <resultMap id="BaseResultMapR1" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="rainfall_mean" property="num"></result>
+        <result column="FormatTime" property="time"></result>
+    </resultMap>
+
+
+    <select id="getilluminance_mean" resultMap="BaseResultMapI1">
+        SELECT id,illuminance_mean,FormatTime
+        from datas
+        order by id desc limit #{limitNum}
+    </select>
+
+    <resultMap id="BaseResultMapI1" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="illuminance_mean" property="num"></result>
+        <result column="FormatTime" property="time"></result>
+    </resultMap>
+
+
+    <select id="getV1_mean" resultMap="BaseResultMapV1">
+        SELECT id,V1_mean,FormatTime
+        from datas
+        order by id desc limit #{limitNum}
+    </select>
+
+    <resultMap id="BaseResultMapV1" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="V1_mean" property="num"></result>
+        <result column="FormatTime" property="time"></result>
+    </resultMap>
+
+    <select id="getdisplacement1_mean" resultMap="BaseResultMapD1">
+        SELECT id,displacement1_mean,FormatTime
+        from datas
+        order by id desc limit #{limitNum}
+    </select>
+
+    <resultMap id="BaseResultMapD1" type="cn.hp.bean.BaseData">
+        <id column="id" property="id"></id>
+        <result column="displacement1_mean" property="num"></result>
+        <result column="FormatTime" property="time"></result>
+    </resultMap>
+
+    <select id="getBasePressure1_mean" resultType="cn.hp.bean.BaseNumData">
+        select max(b.Pressure1_mean),min(b.Pressure1_mean),avg(b.Pressure1_mean)
+        from (select Pressure1_mean from datas order by id desc limit #{limitNum}) b
+    </select>
+
+    <select id="getBaseA1_variance" resultType="cn.hp.bean.BaseNumData">
+        select max(b.A1_variance),min(b.A1_variance),avg(b.A1_variance)
+        from (select A1_variance from datas order by id desc limit #{limitNum}) b
+    </select>
+
+    <select id="getBaseT1" resultType="cn.hp.bean.BaseNumData">
+        select max(b.T1),min(b.T1),avg(b.T1)
+        from (select T1 from datas order by id desc limit #{limitNum}) b
     </select>
 
 
-    <select id="getBaseRainfallNums" resultType="cn.hp.bean.BaseNumData">
-        select max(b.num),min(b.num),avg(b.num)
-        from (select num from rainfall order by id desc limit #{limitNum}) b
+    <select id="getBaseHumidity1_mean" resultType="cn.hp.bean.BaseNumData">
+        select max(b.Humidity1_mean),min(b.Humidity1_mean),avg(b.Humidity1_mean)
+        from (select Humidity1_mean from datas order by id desc limit #{limitNum}) b
     </select>
 
-    <select id="getNewPicture" resultType="cn.hp.bean.PictureData">
-        select *
-        from pictures
-        order by id desc limit 1;
+
+    <select id="getBaserainfall_mean" resultType="cn.hp.bean.BaseNumData">
+        select max(b.rainfall_mean),min(b.rainfall_mean),avg(b.rainfall_mean)
+        from (select rainfall_mean from datas order by id desc limit #{limitNum}) b
     </select>
+
+
+    <select id="getBaseilluminance_mean" resultType="cn.hp.bean.BaseNumData">
+        select max(b.illuminance_mean),min(b.illuminance_mean),avg(b.illuminance_mean)
+        from (select illuminance_mean from datas order by id desc limit #{limitNum}) b
+    </select>
+
+    <select id="getBaseV1_mean" resultType="cn.hp.bean.BaseNumData">
+        select max(b.V1_mean),min(b.V1_mean),avg(b.V1_mean)
+        from (select V1_mean from datas order by id desc limit #{limitNum}) b
+    </select>
+
+    <select id="getBasedisplacement1_mean" resultType="cn.hp.bean.BaseNumData">
+        select max(b.displacement1_mean),min(b.displacement1_mean),avg(b.displacement1_mean)
+        from (select displacement1_mean from datas order by id desc limit #{limitNum}) b
+    </select>
+
+
+
+    <!--<select id="getH1List" resultMap="BaseResultMap">-->
+        <!--SELECT *-->
+        <!--from humidity-->
+        <!--order by id desc limit #{limitNum}-->
+    <!--</select>-->
+
+
+    <!--<select id="getPressure1Datas" resultMap="BaseResultMap">-->
+        <!--SELECT *-->
+        <!--from pressure-->
+        <!--order by id desc limit #{limitNum}-->
+    <!--</select>-->
+
+
+    <!--<select id="getRainfall" resultMap="BaseResultMap">-->
+        <!--SELECT *-->
+        <!--from rainfall-->
+        <!--order by id desc limit #{limitNum}-->
+    <!--</select>-->
+
+    <!--<select id="getA1" resultMap="BaseResultMap">-->
+        <!--SELECT *-->
+        <!--from a1-->
+        <!--order by id desc limit #{limitNum}-->
+    <!--</select>-->
+
+
+    <!--<resultMap id="BaseResultMap" type="cn.hp.bean.BaseData">-->
+        <!--<id column="id" property="id"></id>-->
+        <!--<result column="num" property="num"></result>-->
+        <!--<result column="time" property="time"></result>-->
+    <!--</resultMap>-->
+
+
+    <!--<select id="getBaseH1Nums" resultType="cn.hp.bean.BaseNumData">-->
+        <!--select max(b.num),min(b.num),avg(b.num)-->
+        <!--from (select num from humidity order by id desc limit #{limitNum}) b-->
+    <!--</select>-->
+
+    <!--<select id="getBasePressure1Nums" resultType="cn.hp.bean.BaseNumData">-->
+        <!--select max(b.num),min(b.num),avg(b.num)-->
+        <!--from (select num from pressure order by id desc limit #{limitNum}) b-->
+    <!--</select>-->
+
+
+    <!--<select id="getBaseRainfallNums" resultType="cn.hp.bean.BaseNumData">-->
+        <!--select max(b.num),min(b.num),avg(b.num)-->
+        <!--from (select num from rainfall order by id desc limit #{limitNum}) b-->
+    <!--</select>-->
+
+    <!--<select id="getNewPicture" resultType="cn.hp.bean.PictureData">-->
+        <!--select *-->
+        <!--from pictures-->
+        <!--order by id desc limit 1;-->
+    <!--</select>-->
 
 </mapper>

@@ -1,0 +1,61 @@
+2019-06-26 14:57:20  [ http-nio-8083-exec-1:8558 ] - [ ERROR ]  异常:------->org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2'' at line 3
+### The error may exist in file [C:\lyy\hpserver\target\classes\mapping\dataMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT *         from t1         order by id desc limit ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2'' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2'' at line 3
+2019-06-26 14:58:15  [ http-nio-8083-exec-1:24350 ] - [ ERROR ]  异常:------->org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2'' at line 3
+### The error may exist in file [C:\lyy\hpserver\target\classes\mapping\dataMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT *         from t1         order by id desc limit ?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2'' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''2'' at line 3
+2019-06-26 14:59:04  [ http-nio-8083-exec-1:6580 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 14:59:06  [ http-nio-8083-exec-2:8817 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:06:18  [ http-nio-8083-exec-1:426254 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:06:30  [ http-nio-8083-exec-1:9025 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:06:32  [ http-nio-8083-exec-2:11011 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:07:24  [ http-nio-8083-exec-2:5919 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:07:25  [ http-nio-8083-exec-3:7218 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:07:26  [ http-nio-8083-exec-1:8617 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:08:26  [ http-nio-8083-exec-1:10345 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:10:34  [ http-nio-8083-exec-1:4705 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:10:35  [ http-nio-8083-exec-2:6005 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:11:10  [ http-nio-8083-exec-1:5834 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:11:11  [ http-nio-8083-exec-2:7429 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:11:26  [ http-nio-8083-exec-1:5259 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:11:28  [ http-nio-8083-exec-2:6439 ] - [ ERROR ]  异常:------->java.lang.IllegalStateException: Optional int parameter 'limitNum' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-06-26 15:42:16  [ http-nio-8083-exec-1:7508 ] - [ ERROR ]  异常:------->org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter '2' not found. Available parameters are [limitNum, param1]
+2019-06-26 15:42:17  [ http-nio-8083-exec-2:8891 ] - [ ERROR ]  异常:------->org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter '2' not found. Available parameters are [limitNum, param1]
+2019-06-26 15:42:52  [ http-nio-8083-exec-1:5444 ] - [ ERROR ]  异常:------->org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+### The error may exist in file [C:\lyy\hpserver\target\classes\mapping\dataMapper.xml]
+### The error may involve cn.hp.mapper.DataMapper.getBaseNums
+### The error occurred while handling results
+### SQL: select avg(b.num)         from (select num               from t1               order by id desc limit 2) b
+### Cause: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+2019-06-26 15:44:26  [ http-nio-8083-exec-1:6429 ] - [ ERROR ]  异常:------->org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+### The error may exist in file [C:\lyy\hpserver\target\classes\mapping\dataMapper.xml]
+### The error may involve cn.hp.mapper.DataMapper.getBaseNums
+### The error occurred while handling results
+### SQL: select avg(b.num) from (select num from t1  order by id desc limit 2) b
+### Cause: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+2019-06-26 15:50:31  [ http-nio-8083-exec-1:10993 ] - [ ERROR ]  异常:------->org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(b.num) from (select num from t1  order by id desc limit 2) b' at line 1
+### The error may exist in file [C:\lyy\hpserver\target\classes\mapping\dataMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select min(b.num),max(b.num) avg(b.num) from (select num from t1  order by id desc limit 2) b
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(b.num) from (select num from t1  order by id desc limit 2) b' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(b.num) from (select num from t1  order by id desc limit 2) b' at line 1
+2019-06-26 16:42:41  [ http-nio-8083-exec-4:2872947 ] - [ ERROR ]  异常:------->org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30001ms.
+### The error may exist in file [C:\lyy\hpserver\target\classes\mapping\dataMapper.xml]
+### The error may involve cn.hp.mapper.DataMapper.getT1List
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30001ms.
